@@ -29,5 +29,16 @@ class MultiplicationTableBuilderTest {
         // Then
         assertFalse(isInRange);
     }
+    
+    @Test
+    void shouldReturnFalse_whenIsInRange_givenANumber1001() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int number = 1001;
+        // When
+        boolean isInRange = multiplicationTableBuilder.isInRange(number);
+        // Then
+        assertFalse(isInRange);
+    }
 }
 
