@@ -52,5 +52,17 @@ class MultiplicationTableBuilderTest {
         // Then
         assertTrue(isStarterNotBiggerThanEnd);
     }
+
+    @Test
+    void shouldReturnTrue_whenIsStarterNotBiggerThanEnd_givenStart3AndEnd3() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 3;
+        int end = 3;
+        // When
+        boolean result = multiplicationTableBuilder.isStarterNotBiggerThanEnd(start, end);
+        // Then
+        assertTrue(result);
+    }
 }
 
