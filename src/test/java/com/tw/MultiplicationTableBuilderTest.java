@@ -101,5 +101,16 @@ class MultiplicationTableBuilderTest {
         assertFalse(result);
     }
 
+    @Test
+    void shouldReturnFalse_whenInValid_givenStart0AndEnd2() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 0;
+        int end = 2;
+        // When
+        boolean result = multiplicationTableBuilder.isValid(start, end);
+        // Then
+        assertFalse(result);
+    }
 }
 
