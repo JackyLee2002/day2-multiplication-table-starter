@@ -14,6 +14,6 @@ public class MultiplicationTableBuilder {
     }
 
     public String generateExpression(int multiplicand, int multiplier) {
-        return "";
+        return String.format("%d*%d=%d", multiplicand, multiplier, multiplicand * multiplier);
     }
 }
