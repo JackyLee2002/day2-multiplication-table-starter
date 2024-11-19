@@ -76,6 +76,7 @@ class MultiplicationTableBuilderTest {
         // Then
         assertFalse(result);
     }
+
     @Test
     void shouldReturnTrue_whenIsValid_givenStart2AndEnd3() {
         // Given
@@ -86,6 +87,18 @@ class MultiplicationTableBuilderTest {
         boolean result = multiplicationTableBuilder.isValid(start, end);
         // Then
         assertTrue(result);
+    }
+
+    @Test
+    void shouldReturnFalse_whenInValid_givenStart2AndEnd1() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 2;
+        int end = 1;
+        // When
+        boolean result = multiplicationTableBuilder.isValid(start, end);
+        // Then
+        assertFalse(result);
     }
 
 }
